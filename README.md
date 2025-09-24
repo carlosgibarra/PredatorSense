@@ -93,14 +93,13 @@ pip install git+https://github.com/georgewhewell/undervolt.git
 sudo apt install msr-tools
 ```
 
-### Fedora / openSUSE:
+### Fedora:
 ```bash
 # Dependencias Python
 sudo dnf install python3-qt5 python3-pyqtchart
-# o en openSUSE: sudo zypper install python3-qt5 python3-PyQtChart
 
 # Módulo EC (requerido)
-sudo dnf install dkms  # o sudo zypper install dkms
+sudo dnf install dkms
 git clone https://github.com/musikid/acpi_ec/
 cd acpi_ec
 sudo ./install.sh
@@ -108,7 +107,24 @@ sudo modprobe acpi_ec
 
 # Opcional: Undervolting
 pip install git+https://github.com/georgewhewell/undervolt.git
-sudo dnf install msr-tools  # o sudo zypper install msr-tools
+sudo dnf install msr-tools
+```
+
+### openSUSE Tumbleweed:
+```bash
+# Dependencias Python
+sudo zypper install python3-qt5 python3-PyQtChart
+
+# Módulo EC (requerido)
+sudo zypper install dkms
+git clone https://github.com/musikid/acpi_ec/
+cd acpi_ec
+sudo ./install.sh
+sudo modprobe acpi_ec
+
+# Opcional: Undervolting
+pip install git+https://github.com/georgewhewell/undervolt.git
+sudo zypper install msr-tools
 ```
 
 ## Mejoras implementadas:
